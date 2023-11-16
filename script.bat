@@ -2,6 +2,9 @@
 :: Downloads and installs cygwin64 for windows and
 :: invokes the child Unix script using cygwin (for the Unix script, we replace the extension to .sh)
 ::
+:: Version 2023-11-17
+:: https://github.com/sergejskozlovics/unix-script-in-windows.git 
+::
 :: Copyright (c) Institute of Mathematics and Computer Science, University of Latvia
 :: Licence: MIT
 :: Contributors:
