@@ -13,7 +13,8 @@
 if exist C:\cygwin64\bin\dos2unix.exe goto DOS2UNIX_OK
 
 set CYGWIN_INSTALLER_PATH=cygwin_installer
-set CYGWIN_SITE=https://ftp.fsn.hu/pub/cygwin/
+set CYGWIN_SITE=http://ftp.ntua.gr/pub/pc/cygwin/
+::set CYGWIN_SITE=https://ftp.fsn.hu/pub/cygwin/
 
 mkdir %CYGWIN_INSTALLER_PATH%
 pushd %CYGWIN_INSTALLER_PATH%
