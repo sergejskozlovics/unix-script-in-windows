@@ -2,7 +2,7 @@
 :: Downloads and installs cygwin64 for windows and
 :: invokes the child Unix script using cygwin (for the Unix script, we replace the extension to .sh)
 ::
-:: Version 2023-11-17
+:: Version 2023-11-23
 :: https://github.com/sergejskozlovics/unix-script-in-windows.git 
 ::
 :: Copyright (c) Institute of Mathematics and Computer Science, University of Latvia
@@ -50,4 +50,6 @@ set "W_PATH=!W_PATH:D:=/cygdrive/d!"
 set "W_PATH=!W_PATH:d:=/cygdrive/d!"
 set "W_PATH=!W_PATH:;=:!"
 
-C:\cygwin64\bin\bash -c "PATH='/bin:/usr/bin:/usr/local/bin:%W_PATH%' %UNIX_SCRIPT%" %*
+set UNIX_SCRIPT_WITH_ARGS=%UNIX_SCRIPT% %*
+
+C:\cygwin64\bin\bash -c "PATH='/bin:/usr/bin:/usr/local/bin:%W_PATH%' %UNIX_SCRIPT_WITH_ARGS%"
