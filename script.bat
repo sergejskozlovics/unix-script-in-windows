@@ -2,13 +2,13 @@
 :: Downloads and installs cygwin64 for windows and
 :: invokes the child Unix script using cygwin (for the Unix script, we replace the extension to .sh)
 ::
-:: Version 2023-11-23
+:: Version 2024-05-23
 :: https://github.com/sergejskozlovics/unix-script-in-windows.git 
 ::
-:: Copyright (c) Institute of Mathematics and Computer Science, University of Latvia
+:: Copyright (c) Sergeks Kozlovics AND Institute of Mathematics and Computer Science, University of Latvia
 :: Licence: MIT
 :: Contributors:
-::   Sergejs Kozlovics, 2022-2023
+::   Sergejs Kozlovics, 2022-2024
 
 if exist C:\cygwin64\bin\dos2unix.exe goto DOS2UNIX_OK
 
@@ -52,4 +52,4 @@ set "W_PATH=!W_PATH:;=:!"
 
 set UNIX_SCRIPT_WITH_ARGS=%UNIX_SCRIPT% %*
 
-C:\cygwin64\bin\bash -c "PATH='/bin:/usr/bin:/usr/local/bin:%W_PATH%' %UNIX_SCRIPT_WITH_ARGS%"
+C:\cygwin64\bin\bash -c "PATH='/usr/bin:/bin:/usr/local/bin:%W_PATH%' %UNIX_SCRIPT_WITH_ARGS%"
